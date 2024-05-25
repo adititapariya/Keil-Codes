@@ -1,0 +1,67 @@
+A51 MACRO ASSEMBLER  EXP1                                                                 02/09/2024 02:09:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Exp1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Exp1.a51 SET(SMALL) DEBUG PRINT(.\Listings\Exp1.lst) OBJECT(.\Objects\E
+                      xp1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+                       4     
+                       5     
+                       6     
+                       7     
+                       8     
+                       9     
+                      10             
+                      11     
+                      12     
+                      13     
+                      14     
+                      15     
+                      16     
+                      17     
+                      18     
+                      19             
+                      20     
+                      21     
+                      22     
+                      23     
+                      24     
+                      25     
+                      26     
+                      27     
+                      28     
+                      29      
+                      30     
+0000                  31     ORG 0000H 
+0000 E530             32     MOV A,30H 
+0002 A931             33     MOV R1, 31H 
+0004 F4               34     CPL A 
+0005 2401             35     ADD A, #01H 
+0007 FA               36     MOV R2, A 
+0008 E9               37     MOV A, R1 
+0009 F4               38     CPL A 
+000A 2401             39     ADD A, #01H 
+000C 2A               40     ADD A, R2 
+000D F540             41     MOV 40H, A 
+                      42     END 
+                             
+A51 MACRO ASSEMBLER  EXP1                                                                 02/09/2024 02:09:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

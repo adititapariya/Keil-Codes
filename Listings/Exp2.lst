@@ -1,0 +1,77 @@
+A51 MACRO ASSEMBLER  EXP2                                                                 02/09/2024 02:31:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Exp2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Exp2.a51 SET(SMALL) DEBUG PRINT(.\Listings\Exp2.lst) OBJECT(.\Objects\E
+                      xp2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 902500            2         MOV DPTR,#2500H
+0003 C3                3             CLR C
+0004 7A0A              4             MOV R2,#0AH
+0006 E0                5             DO: MOVX A,@DPTR
+0007 FB                6             MOV R3,A
+0008 0583              7             INC DPH
+000A E0                8             MOVX A,@DPTR
+000B 2B                9             ADD A,R3
+000C 1583             10             DEC DPH
+000E F0               11             MOVX @DPTR,A
+000F 0582             12             INC DPL
+0011 DAF3             13             DJNZ R2,DO
+0013 5003             14             JNC STOP
+0015 7401             15             MOV A, #01H
+0017 F0               16             MOVX @DPTR,A
+0018                  17             STOP:
+                      18             END
+                                     
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                                             
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+A51 MACRO ASSEMBLER  EXP2                                                                 02/09/2024 02:31:42 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DO . . . . . . . .  C ADDR   0006H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+STOP . . . . . . .  C ADDR   0018H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

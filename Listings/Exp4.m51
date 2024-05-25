@@ -1,0 +1,76 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/15/2024  17:24:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Exp4.obj TO .\Objects\Exp4 PRINT (.\Listings\Exp4.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Exp4.obj (EXP4)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp4 (EXP4)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0036H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp4 (EXP4)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP4
+  D:00F0H         SYMBOL        B
+  C:0016H         SYMBOL        NEXT
+  C:0028H         SYMBOL        NEXT1
+  C:0000H         LINE#         39
+  C:0002H         LINE#         40
+  C:0005H         LINE#         41
+  C:0006H         LINE#         42
+  C:0008H         LINE#         43
+  C:000AH         LINE#         44
+  C:000CH         LINE#         45
+  C:000FH         LINE#         46
+  C:0010H         LINE#         47
+  C:0011H         LINE#         48
+  C:0012H         LINE#         49
+  C:0014H         LINE#         50
+  C:0016H         LINE#         51
+  C:0018H         LINE#         52
+  C:001AH         LINE#         53
+  C:001DH         LINE#         54
+  C:001EH         LINE#         55
+  C:001FH         LINE#         56
+  C:0021H         LINE#         57
+  C:0023H         LINE#         58
+  C:0024H         LINE#         59
+  C:0025H         LINE#         60
+  C:0027H         LINE#         61
+  C:0028H         LINE#         62
+  C:002AH         LINE#         63
+  C:002DH         LINE#         64
+  C:002EH         LINE#         65
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/15/2024  17:24:23  PAGE 2
+
+
+  C:002FH         LINE#         66
+  C:0031H         LINE#         67
+  C:0033H         LINE#         68
+  C:0034H         LINE#         69
+  -------         ENDMOD        EXP4
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0036H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=54
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

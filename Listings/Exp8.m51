@@ -1,0 +1,101 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/22/2024  15:23:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\EXP8.obj TO .\Objects\Exp8 PRINT (.\Listings\Exp8.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\EXP8.obj (EXP8)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp8 (EXP8)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?EXP8
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     002CH     UNIT         ?PR?MAIN?EXP8
+            CODE    082CH     0023H     UNIT         ?PR?_DELAY?EXP8
+            CODE    084FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Exp8 (EXP8)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?EXP8
+
+?PR?MAIN?EXP8
+  +--> ?PR?_DELAY?EXP8
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp8 (EXP8)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP8
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:082CH         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  D:0008H         PUBLIC        x
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  03/22/2024  15:23:23  PAGE 2
+
+
+  C:0800H         LINE#         101
+  C:0800H         LINE#         102
+  C:0800H         LINE#         103
+  C:0803H         LINE#         104
+  C:080AH         LINE#         105
+  C:080AH         LINE#         106
+  C:080AH         LINE#         107
+  C:0811H         LINE#         108
+  C:0816H         LINE#         109
+  C:0819H         LINE#         110
+  C:081BH         LINE#         111
+  C:081BH         LINE#         112
+  C:0823H         LINE#         113
+  C:0823H         LINE#         114
+  C:082AH         LINE#         115
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:082CH         LINE#         118
+  C:082CH         LINE#         120
+  C:0836H         LINE#         121
+  C:0840H         LINE#         123
+  C:0847H         LINE#         124
+  C:084EH         LINE#         125
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        EXP8
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 004FH BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=94
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

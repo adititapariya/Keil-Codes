@@ -1,0 +1,92 @@
+C51 COMPILER V9.60.7.0   TEST1                                                             04/24/2024 10:10:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TEST1
+OBJECT MODULE PLACED IN .\Objects\test1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE test1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\tes
+                    -t1.lst) TABS(2) OBJECT(.\Objects\test1.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          #define LCD_PORT P1
+   4          sbit RS = P3^0; // Register select
+   5          sbit EN = P3^1; // Enable
+   6          
+   7          void delay(unsigned int msec) {
+   8   1          int i, j;
+   9   1          for (i = 0; i < msec; i++)
+  10   1              for (j = 0; j < 1275; j++);
+  11   1      }
+  12          
+  13          void LCD_command(unsigned char cmd) {
+  14   1          LCD_PORT = cmd;
+  15   1          RS = 0; // Command mode
+  16   1          EN = 1; // High-to-low pulse on enable pin
+  17   1          delay(5);
+  18   1          EN = 0;
+  19   1      }
+  20          
+  21          void LCD_data(unsigned char dat) {
+  22   1          LCD_PORT = dat;
+  23   1          RS = 1; // Data mode
+  24   1          EN = 1; // High-to-low pulse on enable pin
+  25   1          delay(5);
+  26   1          EN = 0;
+  27   1      }
+  28          
+  29          void LCD_init() {
+  30   1          LCD_command(0x38); // 2 lines, 5x7 matrix
+  31   1          LCD_command(0x0E); // Display on, cursor blinking
+  32   1          LCD_command(0x01); // Clear screen
+  33   1          LCD_command(0x80); // Move cursor to beginning of first line
+  34   1      }
+  35          
+  36          void display(int num) {
+  37   1          LCD_data(num/10 + '0');
+  38   1          LCD_data(num%10 + '0');
+  39   1      }
+  40          
+  41          void main() {
+  42   1          int seconds = 0;
+  43   1          int running = 0; // Flag to indicate if the clock is running or stopped
+  44   1      
+  45   1          P2 = 0xFF; // Set Port 2 as input
+  46   1      
+  47   1          LCD_init();
+  48   1      
+  49   1          while(1) {
+  50   2              if (P2^0 == 0 && running == 0) { // Start the clock
+  51   3                  running = 1;
+  52   3              }
+  53   2      
+  54   2              if (P2^1 == 0 && running == 1) { // Stop the clock
+C51 COMPILER V9.60.7.0   TEST1                                                             04/24/2024 10:10:17 PAGE 2   
+
+  55   3                  running = 0;
+  56   3              }
+  57   2      
+  58   2              if (running == 1) {
+  59   3                  display(seconds);
+  60   3                  delay(1000); // Delay for 1 second
+  61   3                  seconds++;
+  62   3                  if (seconds == 100) // Reset the seconds after reaching 99
+  63   3                      seconds = 0;
+  64   3              }
+  65   2          }
+  66   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    198    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

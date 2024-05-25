@@ -1,0 +1,156 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/06/2024  15:42:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\EXP9.obj TO .\Objects\Exp9 PRINT (.\Listings\Exp9.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\EXP9.obj (EXP9)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp9 (EXP9)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     005EH     UNIT         ?PR?MAIN?EXP9
+            CODE    085EH     0017H     UNIT         ?PR?_T_ON?EXP9
+            CODE    0875H     0011H     UNIT         ?PR?_T_OFF?EXP9
+            CODE    0886H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Exp9 (EXP9)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?EXP9
+
+?PR?MAIN?EXP9
+  +--> ?PR?_T_ON?EXP9
+  +--> ?PR?_T_OFF?EXP9
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp9 (EXP9)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP9
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0875H         PUBLIC        _t_off
+  B:00A0H.0       PUBLIC        sw1
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/06/2024  15:42:24  PAGE 2
+
+
+  B:00A0H.1       PUBLIC        sw2
+  B:00A0H.2       PUBLIC        sw3
+  B:00A0H.3       PUBLIC        sw4
+  C:0800H         PUBLIC        main
+  C:0864H         PUBLIC        _t_on
+  D:0089H         PUBLIC        TMOD
+  B:0088H.7       PUBLIC        TF1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  B:0090H.0       PUBLIC        led1
+  B:0090H.1       PUBLIC        led2
+  B:0090H.2       PUBLIC        led3
+  B:0090H.3       PUBLIC        led4
+  -------         PROC          MAIN
+  C:0800H         LINE#         89
+  C:0800H         LINE#         90
+  C:0800H         LINE#         91
+  C:0800H         LINE#         92
+  C:0800H         LINE#         93
+  C:0803H         LINE#         94
+  C:0803H         LINE#         95
+  C:0805H         LINE#         96
+  C:080CH         LINE#         97
+  C:080EH         LINE#         98
+  C:0810H         LINE#         99
+  C:0812H         LINE#         100
+  C:0815H         LINE#         101
+  C:0815H         LINE#         102
+  C:0817H         LINE#         103
+  C:081CH         LINE#         104
+  C:081EH         LINE#         105
+  C:0824H         LINE#         106
+  C:0826H         LINE#         107
+  C:0829H         LINE#         108
+  C:0829H         LINE#         109
+  C:082BH         LINE#         110
+  C:0830H         LINE#         111
+  C:0832H         LINE#         112
+  C:083DH         LINE#         113
+  C:083FH         LINE#         114
+  C:0842H         LINE#         115
+  C:0842H         LINE#         116
+  C:0844H         LINE#         117
+  C:084FH         LINE#         118
+  C:0851H         LINE#         119
+  C:085CH         LINE#         120
+  C:085CH         LINE#         121
+  -------         ENDPROC       MAIN
+  C:0860H         SYMBOL        L?0020
+  -------         PROC          L?0019
+  -------         ENDPROC       L?0019
+  C:0860H         SYMBOL        L?0020
+  -------         PROC          _T_ON
+  D:0006H         SYMBOL        th_on
+  D:0004H         SYMBOL        tl_on
+  C:0864H         LINE#         123
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/06/2024  15:42:24  PAGE 3
+
+
+  C:0864H         LINE#         124
+  C:0864H         LINE#         125
+  C:0867H         LINE#         126
+  C:0869H         LINE#         127
+  C:086BH         LINE#         128
+  C:086DH         LINE#         129
+  C:0870H         LINE#         130
+  C:0872H         LINE#         131
+  C:0874H         LINE#         132
+  -------         ENDPROC       _T_ON
+  -------         PROC          _T_OFF
+  D:0006H         SYMBOL        th_off
+  D:0004H         SYMBOL        tl_off
+  C:0875H         LINE#         133
+  C:0875H         LINE#         134
+  C:0875H         LINE#         135
+  C:0878H         LINE#         136
+  C:087AH         LINE#         137
+  C:087CH         LINE#         138
+  C:087EH         LINE#         139
+  C:0881H         LINE#         140
+  C:0883H         LINE#         141
+  C:0885H         LINE#         142
+  -------         ENDPROC       _T_OFF
+  -------         ENDMOD        EXP9
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0086H BYTE ( 6%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=149
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

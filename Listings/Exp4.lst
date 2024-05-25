@@ -1,0 +1,99 @@
+A51 MACRO ASSEMBLER  EXP4                                                                 02/15/2024 17:24:21 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Exp4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Exp4.a51 SET(SMALL) DEBUG PRINT(.\Listings\Exp4.lst) OBJECT(.\Objects\E
+                      xp4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+                       4     
+                       5     
+                       6     
+                       7     
+                       8     
+                       9     
+                      10     
+                      11     
+                      12     
+                      13     
+                      14     
+                      15     
+                      16     
+                      17     
+                      18     
+                      19     
+                      20     
+                      21                     
+                      22     
+                      23     
+                      24     
+                      25     
+                      26     
+                      27     
+                      28     
+                      29     
+                      30     
+                      31     
+                      32     
+                      33     
+                      34     
+                      35     
+                      36     
+                      37                     
+0000                  38     ORG 0000H
+0000 E530             39             MOV A,30H
+0002 8530F0           40             MOV B,30H
+0005 A4               41             MUL AB
+0006 F540             42             MOV 40H,A
+0008 A9F0             43             MOV R1,B
+000A E531             44             MOV A,31H
+000C 8530F0           45             MOV B,30H
+000F A4               46             MUL AB
+0010 29               47             ADD A,R1
+0011 FA               48             MOV R2,A
+0012 5002             49             JNC NEXT
+0014 05F0             50             INC B
+0016 ABF0             51             NEXT: MOV R3,B
+0018 E530             52             MOV A,30H
+001A 8531F0           53             MOV B,31H
+001D A4               54             MUL AB
+001E 2A               55             ADD A,R2
+001F F541             56             MOV 41H,A
+0021 E5F0             57             MOV A,B
+A51 MACRO ASSEMBLER  EXP4                                                                 02/15/2024 17:24:21 PAGE     2
+
+0023 3B               58             ADDC A,R3
+0024 FC               59             MOV R4,A
+0025 5001             60             JNC NEXT1
+0027 0D               61             INC R5
+0028 E531             62             NEXT1: MOV A,31H
+002A 8531F0           63             MOV B,31H
+002D A4               64             MUL AB
+002E 2C               65             ADD A,R4
+002F F542             66             MOV 42H,A
+0031 E5F0             67             MOV A,B
+0033 3D               68             ADDC A,R5
+0034 F543             69             MOV 43H,A
+                      70             END
+A51 MACRO ASSEMBLER  EXP4                                                                 02/15/2024 17:24:21 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+NEXT . . . . . . .  C ADDR   0016H   A   
+NEXT1. . . . . . .  C ADDR   0028H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

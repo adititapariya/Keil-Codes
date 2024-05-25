@@ -1,0 +1,128 @@
+C51 COMPILER V9.60.7.0   EXP_10                                                            04/05/2024 15:48:03 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE EXP_10
+OBJECT MODULE PLACED IN .\Objects\EXP 10.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE EXP 10.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\EX
+                    -P 10.lst) TABS(2) OBJECT(.\Objects\EXP 10.obj)
+
+line level    source
+
+   1          /*#include<reg51.h>
+   2          
+   3          void timer0_isr (void) interrupt 1{
+   4            P1= ~P1;
+   5            TH0 = 0XFC;
+   6            TL0 = 0X67;
+   7          }
+   8          
+   9          void main(){
+  10            TMOD = 0X01;
+  11            IE = 0X82;
+  12            TH0 = 0XFC;
+  13            TL0 = 0X67;
+  14            TR0 = 1;
+  15            while(1);
+  16          }*/
+  17          
+  18          /*#include<reg51.h>
+  19          
+  20          void timer0_isr (void) interrupt 3{
+  21            P1= ~P1;
+  22            TH0 = 0XFC;
+  23            TL0 = 0X67;
+  24          }
+  25          
+  26          void main(){
+  27            TMOD = 0X01;
+  28            IE = 0X88;
+  29            TH0 = 0XFC;
+  30            TL0 = 0X67;
+  31            TR0 = 1;
+  32            while(1);
+  33          }*/
+  34          
+  35          
+  36          /*#include<reg51.h>
+  37          unsigned int x=0;
+  38          
+  39          void timer0_isr (void) interrupt 1{
+  40            if(x==0){
+  41              P1= 0X00;
+  42              TH0 = 0XFE;
+  43              TL0 = 0XEC;
+  44              x=1;
+  45            }
+  46            else if(x==1){
+  47              P1=0XFF;
+  48              TH0=0XFD;
+  49              TL0=0X7B;
+  50              x=0;
+  51            }
+  52          }
+  53          void main(){
+  54            TMOD = 0X01;
+C51 COMPILER V9.60.7.0   EXP_10                                                            04/05/2024 15:48:03 PAGE 2   
+
+  55            IE = 0X82;
+  56            TH0 = 0XFD;
+  57            TL0 = 0X7B;
+  58            TR0 = 1;
+  59            while(1);
+  60          }*/
+  61          
+  62          /*#include<reg51.h>
+  63          unsigned int i,j;
+  64          
+  65          void Delay(int t){
+  66            for(i=0;i<t;i++){
+  67              for(j=0;j<t;j++){
+  68                ;
+  69              }
+  70            }
+  71          }
+  72          
+  73          void ex0_isr (void) interrupt 0{
+  74            P1= ~P1;
+  75            Delay(500);
+  76          }
+  77          
+  78          void main(){
+  79            IE=0X81;
+  80            while(1);
+  81          }*/
+  82          
+  83          #include<reg51.h>
+  84          unsigned int i,j;
+  85          
+  86          void Delay(int t){
+  87   1        for(i=0;i<t;i++){
+  88   2          for(j=0;j<t;j++){
+  89   3            ;
+  90   3          }
+  91   2        }
+  92   1      }
+  93          
+  94          void ex0_isr (void) interrupt 2{
+  95   1        P1= ~P1;
+  96   1        Delay(500);
+  97   1      }
+  98          
+  99          void main(){
+ 100   1        IE=0X84;
+ 101   1        while(1);
+ 102   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     84    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

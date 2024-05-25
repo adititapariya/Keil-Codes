@@ -1,0 +1,143 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/10/2024  21:16:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\EXP11.obj TO .\Objects\Exp11 PRINT (.\Listings\Exp11.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\EXP11.obj (EXP11)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp11 (EXP11)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?EXP11
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0085H     UNIT         ?PR?MAIN?EXP11
+            CODE    0911H     000DH     UNIT         ?PR?TIMER0_INT?EXP11
+            CODE    091EH     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Exp11 (EXP11)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?EXP11
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp11 (EXP11)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP11
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0911H         PUBLIC        timer0_int
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/10/2024  21:16:42  PAGE 2
+
+
+  D:00A8H         PUBLIC        IE
+  C:088CH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  D:0008H         PUBLIC        dac_cntr
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:00B0H.0       PUBLIC        DAC_WR
+  B:0088H.4       PUBLIC        TR0
+  D:000AH         PUBLIC        i
+  D:000CH         PUBLIC        x
+  D:000EH         PUBLIC        z
+  -------         PROC          MAIN
+  C:088CH         LINE#         148
+  C:088CH         LINE#         149
+  C:088CH         LINE#         150
+  C:088FH         LINE#         151
+  C:0892H         LINE#         152
+  C:0895H         LINE#         153
+  C:0898H         LINE#         154
+  C:089AH         LINE#         155
+  C:08A0H         LINE#         156
+  C:08A0H         LINE#         157
+  C:08A0H         LINE#         158
+  C:08A8H         LINE#         159
+  C:08A8H         LINE#         160
+  C:08ACH         LINE#         161
+  C:08B2H         LINE#         162
+  C:08B2H         LINE#         163
+  C:08B4H         LINE#         164
+  C:08B7H         LINE#         165
+  C:08BFH         LINE#         166
+  C:08C1H         LINE#         167
+  C:08C6H         LINE#         168
+  C:08C6H         LINE#         169
+  C:08CBH         LINE#         170
+  C:08CBH         LINE#         171
+  C:08CBH         LINE#         172
+  C:08D3H         LINE#         173
+  C:08D3H         LINE#         174
+  C:08D5H         LINE#         175
+  C:08D8H         LINE#         176
+  C:08E0H         LINE#         177
+  C:08E3H         LINE#         178
+  C:08E9H         LINE#         179
+  C:08E9H         LINE#         180
+  C:08EEH         LINE#         181
+  C:08EEH         LINE#         182
+  C:08EEH         LINE#         183
+  C:08F6H         LINE#         184
+  C:08F6H         LINE#         185
+  C:08F8H         LINE#         186
+  C:08FBH         LINE#         187
+  C:0903H         LINE#         188
+  C:0905H         LINE#         189
+  C:090BH         LINE#         190
+  C:090BH         LINE#         191
+  C:090FH         LINE#         192
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/10/2024  21:16:42  PAGE 3
+
+
+  C:090FH         LINE#         193
+  C:090FH         LINE#         194
+  C:090FH         LINE#         195
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0_INT
+  C:0911H         LINE#         198
+  C:0911H         LINE#         200
+  C:0917H         LINE#         201
+  C:091AH         LINE#         202
+  C:091DH         LINE#         204
+  -------         ENDPROC       TIMER0_INT
+  -------         ENDMOD        EXP11
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00A1H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=17.0 xdata=0 code=305
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,99 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/05/2024  15:48:04  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\EXP 10.obj TO .\Objects\Exp10 PRINT (.\Listings\Exp10.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\EXP 10.obj (EXP_10)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp10 (EXP_10)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?EXP_10
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0010H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     07EAH                  *** GAP ***
+            CODE    0800H     0031H     UNIT         ?PR?_DELAY?EXP_10
+            CODE    0831H     001EH     UNIT         ?PR?EX0_ISR?EXP_10
+            CODE    084FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    085BH     0005H     UNIT         ?PR?MAIN?EXP_10
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Exp10 (EXP_10)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?EX0_ISR?EXP_10
+  +--> ?PR?_DELAY?EXP_10
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?EXP_10
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp10 (EXP_10)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP_10
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/05/2024  15:48:04  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A8H         PUBLIC        IE
+  C:085BH         PUBLIC        main
+  C:0831H         PUBLIC        ex0_isr
+  D:0008H         PUBLIC        i
+  D:000AH         PUBLIC        j
+  C:0800H         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  C:0800H         LINE#         86
+  C:0800H         LINE#         87
+  C:080EH         LINE#         88
+  C:081CH         LINE#         90
+  C:0826H         LINE#         91
+  C:0830H         LINE#         92
+  -------         ENDPROC       _DELAY
+  -------         PROC          EX0_ISR
+  C:0831H         LINE#         94
+  C:083CH         LINE#         95
+  C:083FH         LINE#         96
+  C:0846H         LINE#         97
+  -------         ENDPROC       EX0_ISR
+  -------         PROC          MAIN
+  C:085BH         LINE#         99
+  C:085BH         LINE#         100
+  C:085EH         LINE#         101
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        EXP_10
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0057H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=102
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  EXP3                                                                 02/09/2024 10:55:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp3.a51 SET(SMALL) DEBUG PRINT(.\Listings\exp3.lst) OBJECT(.\Objects\e
+                      xp3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 902500            2             MOV DPTR,#2500H
+0003 E0                3             MOVX A,@DPTR
+0004 F8                4             MOV R0,A
+0005 7900              5             MOV R1,#00H
+0007 7A09              6             MOV R2,#09H
+0009 0582              7             FIND: INC DPL
+000B E0                8             MOVX A,@DPTR
+000C 28                9             ADD A,R0
+000D F8               10             MOV R0,A
+000E 5001             11             JNC NEXT
+0010 09               12             INC R1
+0011 DAF6             13             NEXT: DJNZ R2, FIND
+0013 902600           14             MOV DPTR,#2600H
+0016 E8               15             MOV A,R0
+0017 F0               16             MOVX @DPTR,A
+0018 0582             17             INC DPL
+001A E9               18             MOV A,R1
+001B F0               19             MOVX @DPTR,A
+                      20             END
+                                             
+                             
+                             
+A51 MACRO ASSEMBLER  EXP3                                                                 02/09/2024 10:55:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPL. . . . . . . .  D ADDR   0082H   A   
+FIND . . . . . . .  C ADDR   0009H   A   
+NEXT . . . . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

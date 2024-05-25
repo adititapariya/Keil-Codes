@@ -1,0 +1,50 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/08/2024  15:10:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\EXP7.obj TO .\Objects\Exp7 PRINT (.\Listings\Exp7.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\EXP7.obj (EXP7)
+
+
+LINK MAP OF MODULE:  .\Objects\Exp7 (EXP7)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0011H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Exp7 (EXP7)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        EXP7
+  C:000BH         SYMBOL        HERE
+  C:000FH         SYMBOL        RESULT
+  C:0000H         LINE#         28
+  C:0002H         LINE#         29
+  C:0003H         LINE#         30
+  C:0005H         LINE#         31
+  C:0007H         LINE#         32
+  C:0009H         LINE#         33
+  C:000BH         LINE#         34
+  C:000DH         LINE#         35
+  C:000FH         LINE#         36
+  -------         ENDMOD        EXP7
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0011H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=17
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
