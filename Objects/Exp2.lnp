@@ -1,0 +1,3 @@
+".\Objects\Exp2.obj" 
+TO ".\Objects\Exp2" 
+PRINT(".\Listings\Exp2.m51")
